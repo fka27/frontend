@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        div#container {
+            width: 600px;
+            height: 200px;
+            left: 0px;
+            top: 0px;
+            position: relative;
+        }
+
+        div#home {
+            width: 50px;
+            height: 200px;
+            background-color: lightblue;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 100;
+        }
+
+        ul#menu {
+            width: 600px;
+            height: 200px;
+            position: absolute;
+            left: -600px;
+            top: 0;
+        }
+
+        ul#menu li{
+            float: left;
+            width: 200px;
+            height: 200px;
+            opacity: 0.7;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            // toggle 지원X
+            // $('#home').toggle(
+            //     function () {
+            //         $('ul#menu').stop().animate({left: "50px"}, 500)
+            //     },
+            //     function () {
+            //         $('ul#menu').stop().animate({left: "-600px"}, 500)
+            //     }
+            // )
+
+            // 클릭하면 메뉴 펼쳐지기 
+            // #home 상태값
+            var i = 0;
+
+            $('#home').click(function () {
+                if (i == 0) {
+                    $('ul#menu').stop().animate({left: "50px"}, 500);
+                    i = 1;  //조건을 거짓으로 하면 다음 식에서 거짓을 실행
+                } else {
+                    $('ul#menu').stop().animate({left: "-600px"}, 500);
+                    i = 0;  //조건을 참으로 하면 다음 식에서 참을 실행
+                }
+            });
+
+            $('#home').mousemove(function(e){
+                var pos = e.pageY - parseInt($('#container').css("height")) / 2 + "px"
+                $('#container').css({top:pos})
+            });
+
+            // 마우스를 올릴 때 투명도 설정
+            $("ul#menu li").hover(
+                function () {
+                    $(this).animate({opacity: 1}, 300)
+                }, function() {
+                    $(this).animate({opacity: 0.7}, 300)
+                }
+            );
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="home">HOME</div>
+        <ul id="menu">
+            <li><img src="./th_bg1.jpg"></li>
+            <li><img src="./th_bg2.jpg"></li>
+            <li><img src="./th_bg3.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>
