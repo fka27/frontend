@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="tutorial">
+            <li class="html">HTML</li>
+            <li class="css" id="css">CSS</li>
+            <li class="css3">CSS3</li>
+            <li class="javascript">JavaScript</li>
+            <li class="jquery">jQuery</li>
+            <li class="blank"></li>
+            <li class="html">HTML</li>
+            <li class="html">HTML</li>
+        </ul>
+        <p id="portfolio">portfolio</p>
+    </div>
+
+    <script>
+        'use strict';
+
+// 태그이름으로 접근: NodeList object -> 배열[인덱스를 가지고 있음]
+        // const li = document.getElementsByTagName('li');
+
+        // console.log(li);
+        // console.log(li[1]);
+        // console.log(li.item(1));
+        // console.log(li.length);
+
+        // li[1].style.backgroundColor = "#666";
+
+        // for (let i = 0; i < li.length; i++) {
+        //     li[i].style.backgroundColor = "#666";
+        // }
+
+// class 이름으로 접근: NodeList object -> 배열  => 하나만 적용하려면 인덱스 값 삽입
+        // const html = document.getElementsByClassName("html");
+        // console.log(html); 
+        // console.log(html[0]); 
+        // console.log(html.item(0));
+        
+        // html[0].style.backgroundColor = '#666';
+        // html.style.backgroundColor = '#666';
+        // for(let i = 0; i <  html.length; i++) {
+        //     html[i].style.backgroundColor = '#666';
+        // }
+
+// id로 접근: Element object
+        // const tutorial = document.getElementById('tutorial');
+        // tutorial.style.backgroundColor= "#666";
+        document.getElementById('css'). style.backgroundColor = 'red';
+// CSS 기법으로 첫번째 노드를 선택: node object  (querySelector: 하나만 선택가능)
+        const li = document.querySelector('#tutorial > li');
+        for (let i = 0; i < il.length; i++) {
+            li.style.backgroundColor = "#666";
+        }
+
+// CSS 기법으로 전체 노드를 선택: nodeList object  (querySelectorAll: 전체 선택가능)
+        // const li = document.querySelectorAll('#tutorial > li');
+        // for (let i = 0; i < li.length; i++) {
+        //     // li[i].style.backgroundColor= "#666";
+        //     if (li[i].textContent == "HTML" || li[i].textContent == "CSS") {
+        //         li[i].style.backgroundColor= "#666";
+        //     }
+        // }
+    </script>
+</body>
+</html>

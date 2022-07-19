@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .ball {
+            position: absolute;
+            left: 50px;
+            top: 150px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: lightgray;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .on {
+            transform: scale(2);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball" onclick="함수명()"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        'use strict';
+        const ball = document.querySelector('.ball');
+        const box = document.querySelector('.box');
+        // ball.addEventListener('이벤트', function () {});
+        // ball.addEventListener('이벤트', 함수명());
+        // 함수명() {}
+
+        ball.addEventListener('dblclick', function (e) {
+            e.target.classList.toggle('on');    // 현재 이벤트가 적용된 요소
+            box.classList.toggle('on');         // 다른 요소
+        });
+    </script>
+</body>
+</html>

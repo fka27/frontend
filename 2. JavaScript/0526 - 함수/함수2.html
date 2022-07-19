@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수2</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function func1(num) {
+            console.log(`전달받은 매개변수의 값은 ${num}`); 
+        }
+
+        const func2 = function (start, end) {
+
+            let sum = 0;
+            for(let i = start; i <= end; i++) {
+                sum = sum + i;
+            }
+            console.log(`${start}부터 ${end}까지의 총합은 ${sum}`);
+        }
+
+        func1(10);     
+        func2(1, 100);
+
+
+        //  ''...매개변수'는 나머지 값을 전부 적용
+            function func3 (num1, num2, ...num3) {
+            console.log(`num1의 값 : ${num1}`);
+            console.log(`num2의 값 : ${num2}`);
+            console.log(`num3의 값 : ${num3}`);
+        }
+        func3 (100, 90, 40, 50, 80, 90, 30);
+
+        
+        //나머지 매개변수
+        function func4(...jumsu) {
+            for (let i of jumsu) {
+                console.log(i);
+            }
+        }
+        func4 (100, 90, 40, 50, 80, 90, 30);
+
+
+        //디폴드 매개변수
+        function func5(num1 = 1, num2 = 1) {
+            console.log(`${num1} + ${num2} = ${num1 + num2}`);
+            console.log(`${num1} - ${num2} = ${num1 - num2}`);
+            console.log(`${num1} * ${num2} = ${num1 * num2}`);
+            console.log(`${num1} / ${num2} = ${num1 / num2}`);
+        }
+        func5 (5, 3);
+        func5 ();
+    </script>
+</body>
+</html>

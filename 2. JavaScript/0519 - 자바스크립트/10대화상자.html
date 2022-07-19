@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대화상자</title>
+</head>
+<body>
+    <script>
+        'use strict';
+         alert('안녕하세요. JaveScript!');
+        // 사용자에게 메세지를 보여주고, 확인을 기다립니다
+
+        const result = confirm('확인 또는 취소를 눌러주세요');
+        console.log(result);
+        // 사용자에게 메세지를 보여주고,
+        // 확인 또는 취소를 누르면 그 결과를 불리언 값으로 리턴
+
+        const name = prompt('당신의 이름을 입력하세요');
+        document.write(`당신의 이름은 ${name}이군요. 반갑습니다.`);
+        document.write(`name의 타입: ${typeof (name)}`);
+
+        const num1 = prompt('첫번째 숫자를 입력하세요');
+        const num2 = prompt('두번째 숫자를 입력하세요');
+        console.log(`두 수의 합 : ${Number(num1) + Number(num2)}`);
+        // 사용자에게 메세지를 보여주고,
+        // 사용자가 입력한 문자열을 리턴    
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const str1 = '안녕하세요. javascript';
+
+        // 해당 문자열 길이 반환
+        console.log(str1.length);
+
+        // 해당 '문자'가 몇 번째인지 반환
+        console.log(str1.indexOf('j'));
+
+        // 해당 '단어'라면 몇 번째부터 인지 반환
+        console.log(str1.indexOf('java'));
+
+        // 대소문자 구별 -> 찾지 못했을 경우 -1 리턴
+        console.log(str1.indexOf('Java'));
+
+        // 해당 문자가 '중복'이라면 첫번째 위치 반환
+        console.log(str1.indexOf('a'));
+
+        // last는 해당 문자가 '중복'이라면 마지막으로 삽입 된 위치 반환
+        console.log(str1.lastIndexOf('a'));
+
+        // 해당 번째 문자 반환
+        console.log(str1.charAt(7));
+
+        // 해당 문자가 있는지 참, 거짓 반환
+        console.log(str1.includes('Java'));
+        console.log(str1.includes('java'));
+
+        // 해당 위치 부터 끝까지 문자열 추출
+        console.log(str1.substring(7));
+
+        // 해당 위치 부터 해당 위치 전 까지 문자열 추출
+        console.log(str1.substring(7, 11));
+
+        // 해당 위치 부터 해당 글자 갯수만큼 추출
+        console.log(str1.substr(7, 4));
+
+
+        const str2 = "드라이브, 영화감상, 게임, 쇼핑, 잠자기, 여행";
+        const hobby = str2.split(',');   // 배열
+                    // hobby[0] = "드라이브";
+                    // hobby[1] = "영화감상";
+                    // hobby[2] = "게임";
+                    // hobby[3] = "쇼핑";
+                    // hobby[4] = "잠자기";
+                    // hobby[5] = "여행";
+        for (let h of hobby) {
+            console.log(h);
+        }
+
+        hobby.forEach(function (val, idx, arr) {
+            console.log(`값: ${val}, 인덱스: ${idx}, 배열: ${arr}`);
+        });
+
+
+        console.log(str1);
+
+        // 해당 문자열을 해당 문자열로 교체
+        console.log(str1.replace('안녕하세요.', 'HELLO!'));
+        
+
+        const str3 = '     javascript     ' 
+        console.log(`|${str3}|`);
+
+        // 공백제거
+        console.log(`|${str3.trim()}|`);
+
+        // 해당 문자열을 소문자로 반환
+        console.log(str3.toLowerCase());
+
+        // 해당 문자열을 대문자로 반환
+        console.log(str3.toUpperCase());
+
+    </script>
+</body>
+</html>

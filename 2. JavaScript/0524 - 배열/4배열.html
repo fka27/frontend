@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열4</title>
+</head>
+<body>
+    <h2>배열4</h2>
+    <script>
+        'use strict';
+        let arr1 = ['김사과', 20, 160.5, true];
+        console.log(arr1);
+        
+        //push() : 배열 요소 추가
+        arr1.push('남자');
+        console.log(arr1);
+
+        //shift() : 배열요소의 첫번째 제거
+        arr1.shift();
+        console.log(arr1);
+
+        //concat() : 배열끼리 합치기
+        let arr2 = ['김사과', '서울', '학생'];
+        let arr = arr1.concat(arr2);
+        console.log(arr);
+
+        //join() : 배열 요소 사이마다 해당 문자 삽입
+        arr = arr.join("|");
+        console.log(arr);
+
+        //sort() : 배열을 정방향으로 배치
+        let arr3 = ['c', 'b', 'a', 'z', 'o'];
+        arr3.sort();
+        console.log(arr3);
+
+        //reverse() : 배열을 역순으로 배치
+        arr3.reverse();
+        console.log(arr3);
+    </script>
+</body>
+</html>

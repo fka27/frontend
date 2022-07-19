@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let a = 10;
+        let b = 20;
+        let c = 3;
+
+        document.write(`<p>자바스크립트</p>`);
+        document.write(`<p>${++a}</p>`);  // 11
+        // 변수의 값을 1증가 시킨 후, 다음 연산 진행
+        
+        document.write(`<p>${a++}</p>`);  // 12 이지만 후위연산자이기 때문에 11로 보임
+        document.write(`<p>${c++}</p>`);  // 4 이지만 후위연산자이기 때문에 3으로 보임
+        // 먼저 연산 후, 변수의 값을 1증가
+
+        document.write(`<p>${++a}</p>`);  // 12 + 1 => 13
+        // 위의 값을 그대로 가지고 오기 때문에 12로 시작
+
+        document.write(`<p>${++a + b++}</p>`);  // 13 + 1 => 14 + 21 => 35 
+        // 후위연산자가 있기 때문에 34
+    </script>
+</body>
+</html>

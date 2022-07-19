@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            margin: 100px;
+            padding: 5px 15px;
+            color: #000;
+            border: 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .ball {
+            position: absolute;
+            top: 200px;
+            left: 40px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: lightpink;
+        }
+
+    </style>
+    <script>
+        window.addEventListener('load',function () {
+            var queue = document.querySelector('#queue');
+            var ball = document.querySelector('.ball');
+            var x = ball.offsetLeft;
+            var targetx = 400;
+
+            queue.addEventListener('click',function () {
+                animate1(ball, x, targetx);
+            })
+        })
+
+        function animate1(target, startx, targetx) {
+            var timer = setInterval(function () {
+
+                if (startx < targetx) {
+                    startx += 10 
+                }
+                else {
+                    startx = targetx;
+                    clearInterval(timer)
+                }
+
+                target.style.left = startx + "px";
+            }, 10)
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <button id="queue">animate queue</button>
+    <div class="ball"></div>
+
+</body>
+
+</html>

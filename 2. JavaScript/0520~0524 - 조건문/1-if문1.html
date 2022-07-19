@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문1</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const age = Number(prompt('나이를 입력하세요'));
+        console.log('변수 값 입력완료');
+
+        if (age > 19) {
+            console.log('조건문 실행');
+            console.log('성인입니다.');
+            console.log('성인인증을 받았습니다.');
+            document.write(`성인인증을 받았습니다.<br>`);
+            document.write('성인인증을 받았습니다.' + '<br>');
+        }
+        // else {
+        //     console.log('미성년자 입니다.');
+        //     document.write('미성년자 입니다.<br>');
+        // };
+        console.log('프로그램 종료');
+        
+        //바로 실행 가능 => if(age > 19) console.log('성인입니다.');
+    </script>
+</body>
+</html>

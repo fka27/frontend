@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const rects = document.querySelectorAll('.rect');
+        
+        // http://placekitten.com/
+        rects.forEach((rect, index) => {
+            const width = (index + 1) * 100
+            const src = `http://placekitten.com/${width}/250`
+            // const src = './img/img01.jpg';
+
+            // rect.setAttribute('속성명', 속성값); -> 속성을 설정하는 방법
+            // rect.getAttribute('속성명', 속성값); -> 속성을 추출하는 방법
+            rect.setAttribute('src', src);
+        });
+        
+    });
+</script>
+
+<body>
+    <img src="" class="rect" alt="">
+    <img src="" class="rect" alt="">
+    <img src="" class="rect" alt="">
+    <img src="" class="rect" alt="">
+    
+</body>
+</html>

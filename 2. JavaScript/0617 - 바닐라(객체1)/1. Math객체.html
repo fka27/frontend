@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math객체</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        console.log(Math.min());
+        console.log(Math.max());
+        console.log(Math.min(1, 10, -10, 1000, 0));    // -10
+        console.log(Math.min(1, 10, '-10', 1000, 0));  // -10
+        console.log(Math.min(1, 10, -10, '천', 0));    // NaN
+
+    // 반올림하여 리턴
+        console.log(Math.round(10.49));   // 10
+        console.log(Math.round(10.5));    // 11
+        console.log(Math.round(-10.5));   // -10
+        console.log(Math.round(-10.51));  // -11
+
+    // 소수점 첫번째 자리에서 내림 
+        console.log(Math.floor(10.49));   // 10
+        console.log(Math.floor(10.5));    // 10
+        console.log(Math.floor(-10.5));   // -11
+        console.log(Math.floor(-10.51));  // -11
+
+    // 소수점 첫번째 자리에서 올림
+        console.log(Math.ceil(10.49));   // 11
+        console.log(Math.ceil(10.5));    // 11
+        console.log(Math.ceil(-10.5));   // -10
+        console.log(Math.ceil(-10.51));  // -10
+
+
+        console.log(Math.random());   // 0 ~ 0.9999999
+        console.log(Math.random() * 10 );   // 0 ~ 9.999999
+        console.log((Math.random() * 10) + 1 );   // 0 ~ 10
+        console.log(Math.floor(Math.random() * 10) + 1 );   // 0 ~ 10
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드교체</title>
+</head>
+<body>
+    <h2>노드교체</h2>
+    <div id="parent">
+        <p id="first">HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+    </div>
+    <p id="second">REACT</p>
+    <hr/>
+    <p id="text">제가 좋아하는 과일은 사과입니다.</p>
+
+    <button onclick="changeNode()">요소 노드 교체</button>
+    <button onclick="changeText()">텍스트 노드 교체</button>
+
+    <script>
+        'use strict';
+
+    // HTML을 REACT로 교체
+        const changeNode = function () {
+            const parent = document.getElementById('parent');
+            const first = document.getElementById('first');
+            const second = document.getElementById('second');
+            parent.replaceChild(second, first);
+        }
+    // 인덱스 12번째 글자부터 2글자인 사과를 메론으로 교체 
+        const changeText = function () {
+            const text = document.getElementById('text').firstChild;
+            text.replaceData(12, 2, '메론');
+        }
+    </script>
+</body>
+</html>

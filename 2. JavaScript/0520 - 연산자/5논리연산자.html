@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let a = 10;
+        let b = 20;
+        let c;
+        let d = true;
+
+        document.write(`<p><논리 연산자></p>`);
+        c = a < b && a == b;   
+        document.write(`<p> a < b && a == b : ${c}</p>`);
+        // and연산 : 두 논리식 모두 참이면 참을 반환
+        
+        c = a < b || a == b; 
+        document.write(`<p> a < b || a == b : ${c}</p>`);
+        // or연산 : 두 논리식 중 하나라도 참이면 참을 반환 
+        
+        c = d;   
+        document.write(`<p>${c}</p>`);
+        
+        c = !d; 
+        document.write(`<p>${c}</p>`);
+        // not연산 : 논리식의 결과가 참이면 거짓, 거짓이면 참으로 반환    
+    </script>
+</body>
+</html>

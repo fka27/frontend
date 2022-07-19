@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .ball {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: lightgray;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .on {
+            transform: scale(5);
+            background-color: lightpink;
+        }
+
+        .status {
+            margin-top : 150px;
+        }
+    </style>
+
+    <script>
+        'use strict';
+        window.addEventListener('load', function () {
+            // 태그추가
+            const newNode = document.createElement('div');  // 태그생성
+            newNode.setAttribute("class", "status");        // 클래스 속성을 추가
+            newNode.innerText = "wating event";             // 추가된 태그에 내용 넣기
+
+            const body = document.body;
+            body.appendChild(newNode);    // 태그추가
+
+            const ball = document.querySelector('.ball');
+            
+            ball.addEventListener('mouseover', function () {
+                newNode.innerText = "mouseover event";
+            });
+            
+            ball.addEventListener('mouseout', function () {
+                newNode.innerText = "waiting event";
+            });
+            
+            // ball.addEventListener('click', function () {
+            //     newNode.innerText = "click event";
+            // });
+            
+            ball.addEventListener('mousedown', function () {
+                newNode.innerText = "mousedown event";
+            });
+            
+            ball.addEventListener('mouseup', function () {
+                newNode.innerText = "mouseup event";
+            });
+            
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
