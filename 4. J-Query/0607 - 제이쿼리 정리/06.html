@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0</title>
+    <script src="./js/jquery.js"></script>
+    
+    <script> 
+        $(document).ready(function () {
+            
+            // =$('.main > ul > li:eq(3)').find('ul')
+            // =$('.main > li:eq(2)').find('ul')
+            // =$('.main > li').eq(2).find('ul')
+
+        // append() -> 대상의 자식요소들 중에 뒷부분에 태그를 추가
+            $('.main > li').eq(2).find('ul').append('<li style="color: red">5</li>');
+
+        // prepend() -> 대상의 자식요소들 중에 앞부분에 태그를 추가
+            $('.main > li').eq(2).find('ul').prepend('<li style="color: blue">0</li>');
+
+        // before() -> 대상의 형제요소로 대상 앞에 태그를 추가
+            $('.main > li').eq(2).find('ul').before('<li style="color: red">100</li>');   
+
+
+        // after() -> 대상의 형제요소로 대상 뒤에 태그를 추가
+            $('.main > li').eq(2).find('ul').after('<li style="color: blue">200</li>'); 
+
+        // remove() -> 태그 삭제
+            // $('.main > li').eq(2).find('ul').remove();
+         
+        // clone() -> 태그 복제 ***변수에 저장을 한 후 태그 추가하는 메소드 등을 이용***
+            // var coloneEl = $('.main > li').eq(2).find('ul').clone();
+            // $('.main > li').eq(5).append(coloneEl);
+
+            var el = $('.main > li').eq(2).find('ul');
+
+                el.appendTo($('.main > li').eq(0));  //형제요소 뒤에 위치
+                // 복사 될 대상.appendTo(복사 될 위치)
+                el.prependTo($('.main > li').eq(0)); //형제요소 앞에 위치
+
+        });
+    </script>
+    <style>
+        #wrap { 
+            width: 100%;
+            padding: 20px;
+            border: 3px solid #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul class="main">
+        <li>1</li>
+        <li>2</li>
+        <li>3
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <li>5</li>
+    
+        
+</body>
+
+</html>

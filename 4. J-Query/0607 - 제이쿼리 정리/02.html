@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script> 
+        $(document).ready(function () {
+    
+        // $(대상).메소드()
+            // $('ul li').css({color: 'red'});
+    
+        // eq() -> 같은 요소에서 몇 번째를 의미(0부터 시작)
+            // $('ul li').eq(2).css({color: 'red'});
+    
+        // index() -> 대상 요소가 형제요소에서 몇 번을 의미(0부터 시작)
+            // var i = $('ul li.li3').index();
+            // console.log(`i는 ${i}번 입니다`);
+    
+        // first() / last() -> 첫번째 / 마지막 요소에 적용
+            // $('ul li').first().css({color: 'red'});
+            // $('ul li').last().css({color: 'blue'});
+    
+        // filter('조건') -> 해당 조건에만 적용
+            // $('ul li').filter('.li3').css({color: 'red'});
+    
+        // not('조건') -> 해당 조건만 빼고 적용   
+            // $('ul li').not('.li3').css({color: 'red'});
+    
+        // each() -> 순환처리문
+            $('ul li').css({color: 'red'});
+    
+            $('ul li').each(function () {
+                $(this).css({color: 'red'});
+            });
+            // => 적용 과정이 다르지만 결과는 같음
+    
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li class="li3">3 ( 여기를 바꿔 주세요. )</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+
+</html>
