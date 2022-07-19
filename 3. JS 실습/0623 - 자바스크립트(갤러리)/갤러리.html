@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul, li {
+            list-style: none;
+        }
+        .container {
+            margin-top: 35px;
+            min-width: 440px;
+        }
+
+        .controller {
+            padding-top: 20px;
+        }
+
+        .controller li {
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        .controller li:first-child {
+            margin-left: 0px;
+        }
+
+        .controller li a {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: lightpink;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .controller li.on a {
+            width: 50px;
+            background-color: lightcoral;
+        }
+        .picture {
+            position: relative;
+            margin-top: 30px;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .picture ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 2400px;
+            height: 400px;
+            transition: left 0.4s;
+        }
+        .picture li {
+            float: left;
+            width: 400px;
+            height: 400px;
+        }
+        .picture li div {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('load', () => {
+            // 객체선언
+            const galler = document.querySelector('.picture > ul');
+            const liList = document.querySelectorAll('.controller > li');  // 배열[]
+
+            // liList[0].style.backgroundColor='red';
+
+            for (let i = 0; i < liList.length; i++) {   // liList가 배열이기 때문에 선택하려면 for문 사용
+                let n = 0;  // 현재 클릭 된 버튼에 인덱스 값인 초기값 설정
+                liList[i].index = i;  // 메뉴의 인덱스 값을 미리 설정
+
+                liList[i].addEventListener('click', function (e) {
+                    e.preventDefault();  // a태그의 이벤트 상실
+                    n = e.currentTarget.index;  // => $(this).index()
+                    // e.target         -> 자식요소 이벤트 적용하는 대상
+                    // e.currentTarget  -> 부모요소 이벤트 적용하는 대상
+
+                    targetx = n * 400 * (-1);
+                    galler.style.left = targetx + "px";
+
+                    // 클릭 된 버튼을 비교하고 스타일을 설정 하기 위한 for문
+                    for (let j = 0; j < liList.length; j++) {  
+                        if (j == n) {
+                            liList[j].classList.add('on');
+                        } else {
+                            liList[j].classList.remove('on');
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <ul class="controller">
+            <li class="on"><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+        <div class="picture">
+            <ul>
+                <li><div class="box1" style="background-color: lightpink;"></div></li>
+                <li><div class="box2" style="background-color: lightyellow;"></div></li>
+                <li><div class="box3" style="background-color: lightgray;"></div></li>
+                <li><div class="box4" style="background-color: lightcyan;"></div></li>
+                <li><div class="box5" style="background-color: lightskyblue;"></div></li>
+                <li><div class="box6" style="background-color: lightseagreen;"></div></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
