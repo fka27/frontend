@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>위치설정</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 150px;
+            height: 150px;
+        }
+
+        .box1 {
+            float: left;     /*배치. 한 쪽으로 통일(차례대로)*/
+            margin: 0 auto;  /*좌우에 다른요소 반드시 가로값 ,flat와 동시사용 불가(margin 무시)*/
+            background-color: antiquewhite;
+        }
+        .box2 {
+            display: none;
+            float: right;
+            background-color: aquamarine;
+        }
+        .box3 {
+            display: none;
+            clear: both;    /*따로 배치하고 싶을 때*/
+            float: left;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>

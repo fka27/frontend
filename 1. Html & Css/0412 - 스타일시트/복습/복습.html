@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 프론트엔드 수업 </title>     <!--   제목이 들어 갈 공간   -->
+</head>
+
+<body>
+    <!--   내용이 들어 갈 공간   -->
+
+    첫 수업: html과 css     <!-- 그냥 적으면 그대로 출력-->
+ 
+    <h1>첫 수업: html과 css</h1>     <!-- h 뒤에 숫자는 글자 크기 단계 -->
+    <h2>첫 수업: html과 css</h2>     <!-- 숫자가 작을 수록 크기가 커짐 -->
+    <h3>첫 수업: html과 css</h3>
+
+    <font size="5">첫 수업: html과 css</font>     <!-- font size로도 크기 지정 가능 -->
+    <br>      <!-- 문장 띄우기 -->
+    <font size="8" color="red" face="굴림">첫 수업: html과 css</font>     <!-- size, color, face(글자체)지정 가능 -->
+
+    <p>     <!-- p -> 한 문단을 나타냄 -->
+        <h3>제목 텍스트 크기 3입니다.</h3>
+            텍스트                           크기 3 입니다.<br>     <!-- 코드창에 띄어쓰기를 많이 입력해도 실제로는 한 칸만 반영됨-->
+            텍스트 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크기 3 입니다.<br>     <!-- 띄어쓰기를 많이 해야할 때는 &nbsp; 사용 -->
+            텍스트 크기 3 입니다.<br><br><br><br>     <!-- 한 문장을 띄울 때는 br를 사용하는데 많이 사용하면 여러 줄이 띄워짐-->
+            텍스트 크기 3 입니다.
+            텍스트 크기 3 입니다.     <!-- 문장을 띄우지 않으면 붙혀서 반영됨 -->
+            </p>     <!-- /p -> 한 문단이 끝나면 입력 -->
+
+
+
+
+        <!-- 리스트 만들기 -->
+            <ol>     <!-- (기본)숫자로 나타내는 리스트 -->
+                <li>html</li>
+                <li>css</li>
+                <li>java script</li>
+            </ol>
+
+            <ol type="I">     <!-- I로 나타내는 리스트 -->
+                <li>html</li>
+                <li>css</li>
+                <li>java script</li>
+            </ol>
+
+            <ol type="a">     <!-- 알파벳으로 나타내는 리스트 -->
+                <li>html</li>
+                <li>css</li>
+                <li>java script</li>
+            </ol>
+
+
+
+            <ul>     <!-- (기본)동그라미로 나타내는 리스트 -->
+                <li>html</li>
+                <li>css</li>
+                <li>java script</li>
+            </ul>
+
+            <ul type="square">     <!-- 사각형으로만 나타내는 리스트 -->
+                <li>html</li>
+                <li>css</li>
+                <li>java script</li>
+            </ul>
+
+            <ul>     <!-- 각 다른 기호로 나타내는 리스트 -->
+                <li type="circle">html</li>
+                <li type="disc">css</li>
+                <li type="square">java script</li>
+            </ul>
+        
+            
+            <dl>
+                <dt>설명하고자 하는 단어</dt>
+                <dd>설명하는 부분</dd>
+            </dl>
+
+
+
+
+
+
+
+        <!--이미지 삽입 : <img src="이미지 파일 주소" alt=""> -->
+
+            <img src="./images/몰디브바다.jpg" alt="바다" vspace="100" />    <!--vspace:이미지의 아래, 위 여백두기-->
+            <img src="./images/밤하늘.jpg" alt="하늘" hspace="200" />        <!--hspace:이미지의 왼쪽에 여백두기-->
+            <img src="./images/오로라.jpg" alt="오로라" border="10" />       <!--border:이미지의 테두리 설정하기-->
+            <!-- alt=""를 삽입하는 이유는 이미지가 없거나 오류가 생겨서 이미지 출력이 안되는 경우 대신 출력되는 문자이다. -->
+
+
+        <!--링크이동 버튼 삽입-->
+
+            <a href="http://www.naver.com" target="_self">네이버로 이동버튼</a><br><br>
+            <!-- <a href="연결하고자 하는 곳의 URL/" target="_self -> 새 창을 열지 않고 바로 사이트 연결>-->
+
+            
+        <!--이미지 클릭 시 링크연결 만들기-->   
+
+            <a href="https://www.youtube.com/" target="_blink"><img src="./images/유튜브.png" alt="" width="150" height="140"/></a>      
+            <!-- <a href="연결하고자 하는 곳의 URL/" target=" _blink -> 새 창에서 사이트 연결">
+            <텍스트나 특정 이미지 /크기 -> width=""/height=""></a> -->
+
+            
+            
+            <body marginwidth="200" marginheight="200" background="" bgcolor="">
+                <!-- marginwidth(왼쪽 공간),  marginheight(윗쪽 공간)-->
+                
+                    <table width="400" height="400" border="5" align="" bgcolor="">
+                        <!-- width(폭 설정), height(높이 설정), border(테두리 설정), align(위치설정), bgcolor(배경색)-->
+                
+                        <tr>     <!-- <tr> -> 행 / <td> -> 열 -->
+                            <td width="25" height="25" bgcolor="yellow">1칸</td>
+                            <td width="25" height="25">2칸</td>
+                            <td width="25" height="25">3칸</td>
+                            <td width="25" height="25">4칸</td>
+                        </tr>
+                        <tr>
+                            <td height="25" bgcolor="green">5칸</td>
+                            <td height="25">6칸</td>
+                            <td height="25">7칸</td>
+                            <td height="25">8칸</td>
+                        </tr>
+                        <tr>
+                            <td height="25" bgcolor="blueviolet">9칸</td>
+                            <td height="25">10칸</td>
+                            <td height="25">11칸</td>
+                            <td height="25">12칸</td>
+                        </tr>
+                        <tr>
+                            <td height="25" bgcolor="black">13칸</td>
+                            <td height="25">14칸</td>
+                            <td height="25">15칸</td>
+                            <td height="25">16칸</td>
+                        </tr>
+                
+                    </table>
+                    </body>
+
+
+
+</body>
+
+</html>
+

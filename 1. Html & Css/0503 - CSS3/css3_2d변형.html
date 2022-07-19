@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+
+    /* " :hover "
+    -> ex).box_01:hover .inbox01
+          -> .box_01에 마우스를 올렸을 때 .inbox01을 움직이게 하는 선언 */
+          
+        div.box {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #000;
+        }
+        .inbox01 {
+            width: 150px;
+            height: 150px;
+            background-color: lightcyan;
+            transform: translate(0px, 0px);
+            transition: all 1s;
+        }
+        /* transition -> 현재위치에서 지정크기 만큼 이동 */
+        .box_01:hover .inbox01 {
+            transform: translate(500px, 0px)
+        }
+
+
+        .box_02 {
+            margin-left: 100px;
+        }       
+        .inbox_02 {
+            width: 150px;
+            height: 150px;
+            background-color:lightpink;
+            transform: scale(1);
+            transition: all 1s;
+        }
+        /* scale -> 현재 위치에서 지정 수 만큼 크기 팽창 시키기 */
+        .box_02:hover .inbox_02 {
+            transform: scale(1.2);
+            transition: all 1s;
+        }
+
+
+        .box_03 {
+            margin-left: 100px;
+        }
+        .inbox_03 {
+            width: 150px;
+            height: 150px;
+            background-color:plum;
+            transform: rotate(0deg);
+            transition: all 1s;
+        }
+        /* rotate -> 현재 위치에서 지정 수 만큼 돌리기 */
+        .box_03:hover .inbox_03 {
+            transform: rotate(360deg);
+        }
+
+
+        .box_04 {
+            margin-left: 100px;
+        }
+        .inbox_04 {
+            width: 150px;
+            height: 150px;
+            background-color: lightgrey;
+            transform: skew(0, 0);
+            /* 반대방향은 마이너스 적용 */
+            transition: all 1s;
+        }
+        /* skew - > 현재 위치에서 지정 크기 만큼 비스듬히 움직이기 */
+        .box_04:hover .inbox_04 {
+            transform: skew(45deg, 0);
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class=" box box_01">
+        <div class="inbox01">translate</div>
+    </div>
+    <br><br><br><br>
+    
+    <div class=" box box_02">
+        <div class="inbox_02">scale</div>
+    </div>
+    <br><br><br><br>
+
+    <div class=" box box_03">
+        <div class="inbox_03">rotate</div>
+    </div>
+    <br><br><br><br>
+
+    <div class=" box box_04">
+        <div class="inbox_04">skew</div>
+    </div>
+
+</body>

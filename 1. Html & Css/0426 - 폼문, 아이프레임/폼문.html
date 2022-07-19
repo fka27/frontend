@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼문</title>
+    <!-- 폼문은 인라인태그 사용 -->
+
+    <style>
+        .text {
+            width: 300px;
+            height: 30px;
+            border: 1px dotted #ccc;
+            background-color: pink;
+            /* -> text칸 배경컬러 */
+            font-size: 10px;
+            color: ivory;
+            /* -> 글자컬러 */
+            font-family: 맑은고딕;
+        }
+        .text:focus{
+            background-color: palevioletred;
+            /* -> text를 적을려고 마우스로 text칸을 클릭 했을 때 나타나는 배경색*/
+        }
+    </style>
+</head>
+<body>
+
+<!-- form으로 감싸줘야 버튼이 작동이 됨/ action-> 연결파일 -->
+<form method="post" action="./test.php">
+
+    
+
+    <p>아이디: <input type="text" maxlength="10" size="20" placeholder="아이디를 입력해주세요" class="text"></p>
+    <p>비밀번호: <input type="password" maxlength="10" placeholder="비밀번호를 입력해주세요" class="text"></p>
+    <!-- -> maxlength: 글자 수 지정/  placeholder: text칸에 보여지는 문구 -->
+
+
+    <p>성별: <label>남자<input type="radio" name="gender"></label>
+             <label>여자<input type="radio" name="gender" checked></label></p>
+    <!-- radio타입 사용 시 name속성값을 동일하게 한다-> 한 항목만 선택 할 수 있다. -->
+    <!-- label로 묶어 줄 경우 체크란이 아닌 글자를 클릭해도 체크 적용이 가능하다 -->
+    <!-- checked -> 기본적으로 체크가 되어있게 하는 태그 -->
+
+
+
+    <!-- 체크박스 선택하기 -->
+    <p>취미:
+        <label>드라이브<input type="checkbox"></label>
+        <label>영화감상<input type="checkbox"></label>
+        <label>볼링<input type="checkbox"></label>
+        <label>운동<input type="checkbox"></label></p>
+
+
+
+    <!-- 여러항목 중 선택하기 -->
+    <p>직업:
+        <select>
+            <option value="선택하세요">선택하세요</option>
+            <option value="학생">학생</option>
+            <option value="공무원">공무원</option>
+            <option value="생산직">생산직</option>
+            <option value="서비스직">서비스직</option>
+            <option value="의료계열">의료계열</option>
+            <option value="기타">기타</option>
+        </select>       
+    </p>
+
+
+
+    <!-- 글자입력칸 -->
+    <p>
+        <textarea cols="50" rows="10"></textarea>
+    </p>
+
+
+
+    <!-- 첨부파일 추가하기 (작동x 기능만. 작동은 백엔드부분)-->
+    <p>사진: <input type="file"></p>
+    <p>
+        <input type="submit" value="전송">
+        <input type="reset" value="재작성">
+        <input type="button" value="클릭" onclick="alert('클릭이 되었습니다')">
+        <!-- -> onclick: 클릭 시 안내문구 설정-->
+    </p>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
